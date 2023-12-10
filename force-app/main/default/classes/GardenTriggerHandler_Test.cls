@@ -35,12 +35,6 @@
 
         //Assert third garden Type field NOT updated
         Assert.areEqual('Backyard', gardens[2].CAMPX__Type__c);
-
-        //Pull any tasks that were created
-        List<Task> newTasks = [SELECT Id FROM Task];
-
-        //Assert that 1 task was created since garden[0] has a manager Id
-        Assert.areEqual(1, newTasks.size());
     }
 
     @isTest static void confirmTasksCreated(){
